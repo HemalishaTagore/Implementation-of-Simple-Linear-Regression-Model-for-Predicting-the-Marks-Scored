@@ -59,7 +59,9 @@ plt.show()
 
 
 ## Output:
-![simple linear regression model for predicting the marks scored](sam.png)
+![image](exp2data.png)
+
+![image](exp2.png)
 
 
 ## Result:
