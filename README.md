@@ -8,10 +8,10 @@ To write a program to predict the marks scored by a student using the simple lin
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1. 
-2. 
-3. 
-4. 
+  1. Input the values of X (hours) and Y (marks).
+  2. Calculate ∑X,∑Y,∑XY,∑X
+  3. Find slope m and intercept c.
+  4. Predict using Y=mX+c. 
 
 ## Program:
 
