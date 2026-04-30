@@ -29,19 +29,24 @@ from sklearn.model_selection import train_test_split
 
 df=pd.read_csv('students_mark.csv')
 df.head(11)
+
 hours=np.array(df['Hours studied']).reshape(-1,1)
 marks=np.array(df['Marks'])
 x_train, x_test, y_train, y_test=train_test_split(hours, marks, test_size=0.2, random_state=42)
+
 model=LinearRegression()
 model.fit(x_train, y_train)
 y_pred=model.predict(x_test)
+
 rmse=np.sqrt(mse(y_test, y_pred))
 r2=rs(y_test, y_pred)
+
 print("Model Evalution:")
 print("Slope (m): ", model.coef_[0])
 print("Intercept (b): ", model.intercept_)
 print(f"Root_mean_squared error (rmse): {rmse:.4f}")
 print(f"R2_scored error (r2): {r2:.4f}\n")
+
 plt.plot(hours, model.predict(hours), color='r', label='Predicted data')
 plt.scatter(hours, marks, color='g', label='Actual data')
 plt.xlabel('Hours Studied')
